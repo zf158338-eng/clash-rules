@@ -1,22 +1,50 @@
 # 内容：国外主流 AI 服务与开发工具补充规则（不含国内 AI）
 # 维护：zf158338-eng/clash-rules
 
-# OpenAI / ChatGPT / Sora
+# Android 独立 AI App 进程兜底（仅限纯 AI 应用，不含 Google Search）
+PROCESS-NAME,com.openai.chatgpt
+PROCESS-NAME,com.google.android.apps.bard
+PROCESS-NAME,com.anthropic.claude
+PROCESS-NAME,ai.perplexity.app.android
+PROCESS-NAME,ai.x.grok
+PROCESS-NAME,com.quora.poe
+PROCESS-NAME,com.microsoft.copilot
+PROCESS-NAME,ai.character.app
+
+# OpenAI / ChatGPT / Sora / 语音 LiveKit
 DOMAIN-KEYWORD,openai
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,chat.openai.com.cdn.cloudflare.net
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,openai.fm
+DOMAIN-SUFFIX,livekit.cloud
+DOMAIN-SUFFIX,arkoselabs.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,statsig.com
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,identrust.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN,ios.chat.openai.com
+DOMAIN,android.chat.openai.com
+DOMAIN,ab.chatgpt.com
+DOMAIN,ws.chatgpt.com
+DOMAIN,realtime.chatgpt.com
+DOMAIN,webrtc.chatgpt.com
+DOMAIN,auth.openai.com
+DOMAIN,auth0.openai.com
+DOMAIN,tcr9i.chat.openai.com
+DOMAIN,cdn.auth0.com
+DOMAIN,o33249.ingest.sentry.io
+DOMAIN,o207216.ingest.sentry.io
 
 # Anthropic / Claude
 DOMAIN-KEYWORD,anthropic
@@ -25,20 +53,34 @@ DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,servd-anthropic-website.b-cdn.net
+DOMAIN,a-api.anthropic.com
+DOMAIN,cdn.usefathom.com
 
-# Google Gemini / AI Studio / Antigravity / NotebookLM / DeepMind
+# Google Gemini（含手机端后端）/ AI Studio / Antigravity / NotebookLM / DeepMind
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,gemini.google
 DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,bard.google
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
+DOMAIN-SUFFIX,robin-pa.googleapis.com
+DOMAIN-SUFFIX,bard-pa.googleapis.com
+DOMAIN-SUFFIX,aida.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,alkalicore-pa.clients6.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,aistudio.google
+DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,notebooklm-pa.googleapis.com
+DOMAIN-SUFFIX,tailwind-pa.googleapis.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,labs.google
@@ -51,14 +93,21 @@ DOMAIN-SUFFIX,jetski-webchannel.googleapis.com
 DOMAIN-SUFFIX,antigravity-pa.googleapis.com
 DOMAIN-SUFFIX,autopush-cloudcode-pa.googleapis.com
 DOMAIN-SUFFIX,cloudcode.googleapis.com
+DOMAIN-SUFFIX,geminicodeassist.googleapis.com
+DOMAIN-SUFFIX,cloudaicompanion.googleapis.com
 DOMAIN-SUFFIX,speech.googleapis.com
 DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
 DOMAIN-SUFFIX,jules.google.com
+DOMAIN-SUFFIX,jules.google
 DOMAIN-SUFFIX,idx.google.com
+DOMAIN-SUFFIX,opal.google
+DOMAIN-SUFFIX,opal.google.com
+DOMAIN-SUFFIX,stitch.withgoogle.com
 
 # xAI / Grok
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grokipedia.com
 
 # Microsoft Copilot / Azure AI
 DOMAIN-SUFFIX,copilot.microsoft.com
@@ -87,10 +136,16 @@ DOMAIN-SUFFIX,manus.im
 DOMAIN-SUFFIX,devin.ai
 DOMAIN-SUFFIX,cognition.ai
 DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,kiro.dev
+DOMAIN-SUFFIX,cline.bot
+DOMAIN-SUFFIX,context7.com
+DOMAIN-SUFFIX,augmentcode.com
+DOMAIN-SUFFIX,trae.ai
 
 # 搜索 / 聚合 / 推理 API
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,pplx.ai
+DOMAIN-SUFFIX,pplx-res.cloudinary.com
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-SUFFIX,groq.com
